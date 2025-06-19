@@ -38,6 +38,8 @@ curl -O https://raw.githubusercontent.com/derek-opdee/subagent-example-script/ma
 curl -O https://raw.githubusercontent.com/derek-opdee/subagent-example-script/main/sub-agent-test-generator.md
 curl -O https://raw.githubusercontent.com/derek-opdee/subagent-example-script/main/sub-agent-performance-optimizer.md
 curl -O https://raw.githubusercontent.com/derek-opdee/subagent-example-script/main/sub-agent-migration-assistant.md
+curl -O https://raw.githubusercontent.com/derek-opdee/subagent-example-script/main/sub-agent-refactor.md
+curl -O https://raw.githubusercontent.com/derek-opdee/subagent-example-script/main/sub-agent-new-feature.md
 ```
 
 #### Option B: Clone and Copy
@@ -75,6 +77,8 @@ You should see:
 - `sub-agent-test-generator.md`
 - `sub-agent-performance-optimizer.md`
 - `sub-agent-migration-assistant.md`
+- `sub-agent-refactor.md`
+- `sub-agent-new-feature.md`
 
 ## Usage
 
@@ -169,6 +173,40 @@ sub-agent-migration-assistant --from react@17 --to react@18
 # Examples
 @migrate --pattern class-to-hooks src/components/ --safe-mode
 @sama --from php@7.4 --to php@8.2 --dry-run
+```
+
+### 6. Refactor Command
+
+Intelligently refactor code while preserving functionality:
+
+```bash
+# Full command
+sub-agent-refactor src/components/Dashboard.tsx
+
+# Using aliases
+@refactor src/services/ --type extract-method
+@sar src/ --max-file-size 200 --interactive
+
+# Examples
+@refactor src/utils/ --type consolidate-utils --create-shared
+@sar "src/**/*.tsx" --type extract-component --dry-run
+```
+
+### 7. New Feature Builder
+
+Build new features by learning from existing code:
+
+```bash
+# Full command
+sub-agent-new-feature --feature "user profile card" --location src/components/
+
+# Using aliases
+@new-feature --feature "CSV export API" --location app/Http/Controllers/
+@sanf --feature "real-time chat" --location src/features/ --type full-stack
+
+# Examples
+@new-feature --feature "data table with sorting" --location src/components/ --example-files "src/components/UserTable.tsx"
+@sanf --feature "image optimization worker" --location functions/ --tech-stack cloudflare
 ```
 
 ## How Commands Work

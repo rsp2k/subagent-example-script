@@ -10,7 +10,7 @@ See the [**SETUP.md**](./SETUP.md) guide for detailed installation and usage ins
 ```bash
 # Quick install all commands
 mkdir -p ~/.claude/commands && cd ~/.claude/commands
-for cmd in tech-debt-finder-fixer architecture-reviewer test-generator performance-optimizer migration-assistant; do
+for cmd in tech-debt-finder-fixer architecture-reviewer test-generator performance-optimizer migration-assistant refactor new-feature; do
   curl -O https://raw.githubusercontent.com/derek-opdee/subagent-example-script/main/sub-agent-$cmd.md
 done
 ```
@@ -31,6 +31,12 @@ done
 
 # Migrate frameworks
 @migrate --from react@17 --to react@18
+
+# Refactor code intelligently
+@refactor src/components/ --type extract-component
+
+# Build new features with AI
+@new-feature --feature "user dashboard" --location src/pages/
 ```
 
 ## Overview
@@ -117,6 +123,40 @@ Assists with framework and library migrations:
 - JavaScript→TypeScript
 - Database version upgrades
 - And many more...
+
+### 6. [Refactor Command](./sub-agent-refactor.md)
+**Aliases:** `@refactor`, `@sar`
+
+Intelligently refactors code while maintaining functionality:
+- Extracts methods and components
+- Reduces complexity and splits large files
+- Consolidates duplicate utilities
+- Standardizes patterns across codebase
+- Full test verification after each change
+
+**Key Features:**
+- Auto-detects refactoring opportunities
+- Preserves all functionality
+- Creates atomic, testable changes
+- Supports all major frameworks
+- Interactive review mode
+
+### 7. [New Feature Builder](./sub-agent-new-feature.md)
+**Aliases:** `@new-feature`, `@sanf`
+
+Builds new features by learning from your existing code:
+- Analyzes existing patterns and conventions
+- Maximizes code reuse
+- Checks for existing packages
+- Generates complete, working features
+- Creates tests alongside implementation
+
+**Key Features:**
+- Learns from your codebase patterns
+- Prioritizes using existing code
+- Full-stack feature generation
+- Automatic test generation
+- Strict code review mode
 
 ## How Sub-Agent Orchestration Works
 
