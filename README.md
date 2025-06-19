@@ -2,6 +2,37 @@
 
 A collection of powerful sub-agent orchestration commands for Claude that demonstrate how to coordinate multiple specialized AI agents to tackle complex software engineering tasks.
 
+## 🚀 Quick Start
+
+See the [**SETUP.md**](./SETUP.md) guide for detailed installation and usage instructions.
+
+### Installation (macOS/Linux)
+```bash
+# Quick install all commands
+mkdir -p ~/.claude/commands && cd ~/.claude/commands
+for cmd in tech-debt-finder-fixer architecture-reviewer test-generator performance-optimizer migration-assistant; do
+  curl -O https://raw.githubusercontent.com/derek-opdee/subagent-example-script/main/sub-agent-$cmd.md
+done
+```
+
+### Basic Usage
+```bash
+# Find and fix tech debt
+@tech-debt-finder-fixer src/
+
+# Review architecture
+@arch-review --detect-violations
+
+# Generate tests
+@test-gen --only-untested
+
+# Optimize performance
+@perf-optimize --bundle-analysis
+
+# Migrate frameworks
+@migrate --from react@17 --to react@18
+```
+
 ## Overview
 
 These commands showcase the power of multi-agent systems where specialized agents work in parallel to analyze, plan, and execute complex tasks. Each command orchestrates multiple sub-agents with specific expertise to deliver comprehensive solutions.
