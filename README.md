@@ -8,10 +8,13 @@ See the [**SETUP.md**](./SETUP.md) guide for detailed installation and usage ins
 
 ### Installation (macOS/Linux)
 ```bash
-# Quick install all commands
+# Quick install all commands (local)
+cp commands/*.md ~/.claude/commands/
+
+# Or install from repository
 mkdir -p ~/.claude/commands && cd ~/.claude/commands
-for cmd in tech-debt-finder-fixer architecture-reviewer test-generator performance-optimizer migration-assistant refactor new-feature; do
-  curl -O https://raw.githubusercontent.com/derek-opdee/subagent-example-script/main/sub-agent-$cmd.md
+for cmd in tech-debt-finder-fixer architecture-reviewer test-generator performance-optimizer migration-assistant refactor new-feature tech-debt-finder-parallel; do
+  curl -O https://raw.githubusercontent.com/rsp2k/subagent-example-script/main/commands/sub-agent-$cmd.md
 done
 ```
 
